@@ -26,7 +26,7 @@ function ProfileUpdateForm() {
     const bmi = data.bmi;
           
     
-    axios.post(`${process.env.REACT_APP_BASE_URL}/profile_update_form`,{email,name,weight,height,bmi,gender})
+    axios.post(`https://healthmern.vercel.app/profile_update_form`,{email,name,weight,height,bmi,gender})
     .then(result=>{
     //  toast.success("Data updated Successfully", {
     //    position: "top-right",
