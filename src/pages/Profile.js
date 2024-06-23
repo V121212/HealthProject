@@ -36,7 +36,7 @@ function Profile() {
     //this is a get method wich takes email , weight,height , bmi from db
     useEffect(() => {
       console.log(email);
-      axios.get(`${process.env.REACT_APP_BASE_URL}/show_profile`,{ params: { email: email }})
+      axios.get(`https://healthmern.vercel.app/show_profile`,{ params: { email: email }})
           .then(result => {
               // console.log(result.data.message);
               // console.log(result.data.name)
