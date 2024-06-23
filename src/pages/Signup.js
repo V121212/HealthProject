@@ -13,7 +13,7 @@ function Signup() {
     console.log( "data is  " ,data)
            
     // Here you can add your login logic, like sending a request to your backend
-    axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/auth/signup`, data)
+    axios.post(`https://healthmern.vercel.app/api/v1/auth/signup`, data)
     .then(result => {
         console.log("Response message:", result.data.message);
         // toast.success("SignUp success");
