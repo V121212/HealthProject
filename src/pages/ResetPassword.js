@@ -10,7 +10,7 @@ function ResetPassword() {
    function onSubmit(data) {
     //  console.log(data);
       // console.log(data.email)
-     axios.post(`${process.env.REACT_APP_BASE_URL}/reset_password`,data)
+     axios.post(`https://healthmern.vercel.app/reset_password`,data)
      .then(result=>{
       alert("Success"); 
       // console.log(result.data);
