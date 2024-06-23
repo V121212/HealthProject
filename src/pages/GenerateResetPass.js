@@ -12,7 +12,7 @@ function GenerateResetPass() {
    function onSubmit(data) {
     //  console.log(data);
       // console.log(data.email)
-     axios.post(`${process.env.REACT_APP_BASE_URL}/reset_password/${id}/${token}`,data)
+     axios.post(`https://healthmern.vercel.app/reset_password/${id}/${token}`,data)
      .then(result=>{
       alert("Successfuly generated new pass"); 
       // console.log(result.data);
