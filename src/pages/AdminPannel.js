@@ -10,7 +10,8 @@ function AdminPanel() {
   useEffect(() => {
     const fetchGenderCounts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/gender-counts`);
+        // const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/gender-counts`);
+        const response = await axios.get(`https://healthmern.vercel.app/gender-counts`);
         const { email, male, female } = response.data;
         setCounts({ email, male, female });
         setData([
@@ -36,7 +37,8 @@ function AdminPanel() {
   useEffect(() => {
     const fetchVisitorCounts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/visitor-count`);
+        // const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/visitor-count`);
+        const response = await axios.get(`https://healthmern.vercel.app/visitor-count`);
         setVisitors(response.data.totalVisitors);
         console.log(response.data.totalVisitors);
       } catch (error) {
